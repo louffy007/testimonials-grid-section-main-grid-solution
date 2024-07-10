@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;1,500&display=swap");
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+  font-size: 13px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--Light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  width: 70%;
+}
+
+.testimonials {
+  padding: 1.8rem;
+  border-radius: 8px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+h4 {
+  margin-bottom: 0;
+}
+.header img {
+  height: 30px;
+  border-radius: 50px;
+}
+.Daniel {
+  background-color: var(--Moderate-violet);
+  grid-column: span 2;
+  order: 1;
+}
+.Daniel .description {
+  color: var(--white);
+  font-size: 1.6rem;
+}
+.Daniel p {
+}
+.Jonathan {
+  background-color: var(--Very-dark-grayish-blue);
+  order: 2;
+}
+.Jeanette {
+  background-color: var(--white);
+  order: 4;
+}
+.Patrick {
+  background-color: var(--Very-dark-blackish-blue);
+  order: 5;
+  grid-column: span 2;
+}
+.Kira {
+  background-color: var(--white);
+  order: 3;
+  grid-row: span 2;
+}
