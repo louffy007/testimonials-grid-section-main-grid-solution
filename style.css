@@ -29,11 +29,11 @@ main {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(4, 1fr);
-  width: 70%;
+  width: 1050px;
 }
 
 .testimonials {
-  padding: 1.8rem;
+  padding: 2rem;
   border-radius: 8px;
 }
 .header {
@@ -49,16 +49,19 @@ h4 {
   border-radius: 50px;
 }
 .Daniel {
+  position: relative;
   background-color: var(--Moderate-violet);
   grid-column: span 2;
   order: 1;
+  z-index: 1;
 }
-.Daniel .description {
-  color: var(--white);
-  font-size: 1.6rem;
+.pattern {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 80px;
 }
-.Daniel p {
-}
+
 .Jonathan {
   background-color: var(--Very-dark-grayish-blue);
   order: 2;
@@ -76,4 +79,73 @@ h4 {
   background-color: var(--white);
   order: 3;
   grid-row: span 2;
+}
+
+.name h4 {
+  font-weight: 300;
+}
+.name p {
+  opacity: 0.5;
+}
+.description {
+  margin-top: 1.3rem;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+.description-black {
+  margin-top: 1.3rem;
+  color: var(--Very-dark-grayish-blue);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.big-description {
+  line-height: 1.4rem;
+  margin-top: 1.3rem;
+  font-weight: 100;
+  opacity: 0.7;
+}
+.white {
+  color: var(--white);
+}
+.light-blue {
+  color: var(--Very-dark-blackish-blue);
+}
+
+@media (max-width: 375px) {
+  main {
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+    width: 90%;
+    height: 100%;
+  }
+  .Daniel,
+  .Jonathan,
+  .Jeanette,
+  .Patrick,
+  .Kira {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+  .Daniel {
+    order: 1;
+  }
+
+  .Kira {
+    order: 5;
+  }
+
+  .Jonathan {
+    order: 2;
+  }
+
+  .Jeanette {
+    order: 3;
+  }
+
+  .Patrick {
+    order: 4;
+  }
+  .pattern {
+    right: 20px;
+  }
 }
